@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Http;
 
 Route::get('/', function () {
 
-    $respuesta = Http::get('https://pokeapi.co/api/v2/pokemon?limit=20');
+    $respuesta = Http::get('https://pokeapi.co/api/v2/pokemon?limit=5');
 
     if ($respuesta->failed()) {
         return "Error al obtener datos de la PokeAPI";
